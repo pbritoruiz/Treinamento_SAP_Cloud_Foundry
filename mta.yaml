@@ -1,0 +1,47 @@
+_schema-version: '3.1'
+ID: NotificationProcessingService
+version: 1.0.0
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom 
+      commands:
+        - npx -p @sap/cds-dk cds build --production
+modules:
+  - name: NficationProcessingServicotie-srv
+    type: nodejs
+    path: ./
+    parameters:
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: npm-ci
+    provides:
+      - name: NotificationProcessingService-api # required by consumers of CAP services (e.g. approuter)
+        properties:
+          NotificationProcessingService-url: ${default-url}
+    requires:
+      - name: NotificationProcessingService-auth
+      - name: NotificationProcessingService-dest 
+      - name: NotificationProcessingService-conn
+
+resources: 
+  - name: NotificationProcessingService-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+      config:
+        xsappname: NotificationProcessingService-${org}-${space}
+        tenant-mode: dedicated
+  - name: NotificationProcessingService-dest
+    parameters:
+      service-plan: lite
+      service: destination
+    type: org.cloudfoundry.managed-service
+  - name: NotificationProcessingService-conn
+    parameters:
+      service-plan: lite
+      shared: true
+    type: connectivity

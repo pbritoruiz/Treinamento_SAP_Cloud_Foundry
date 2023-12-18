@@ -1,0 +1,113 @@
+{
+    "vcap": {
+        "services": {
+            "xsuaa": [
+                {
+                    "label": "xsuaa",
+                    "provider": null,
+                    "plan": "application",
+                    "name": "NotificationProcessingService-auth",
+                    "tags": [
+                        "xsuaa"
+                    ],
+                    "instance_guid": "eedd79a0-a346-4e49-82ee-2c2a6ac90e42",
+                    "instance_name": "NotificationProcessingService-auth",
+                    "binding_guid": "24c2aa34-7c07-4b28-8cec-8fddbb696a66",
+                    "binding_name": null,
+                    "credentials": {
+                        "tenantmode": "dedicated",
+                        "sburl": "https://internal-xsuaa.authentication.us10.hana.ondemand.com",
+                        "subaccountid": "534fcfa4-cdd5-4f21-8af0-373f7efd2654",
+                        "credential-type": "instance-secret",
+                        "clientid": "sb-NotificationProcessingService-109531cftrial-dev!t226827",
+                        "xsappname": "NotificationProcessingService-109531cftrial-dev!t226827",
+                        "clientsecret": "ObCXerT6uXzcrU9yaLOgJhDKmu0=",
+                        "serviceInstanceId": "eedd79a0-a346-4e49-82ee-2c2a6ac90e42",
+                        "url": "https://109531cftrial.authentication.us10.hana.ondemand.com",
+                        "uaadomain": "authentication.us10.hana.ondemand.com",
+                        "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoNRTbPAYTz94ox1CX5+E\n5TuraG2UxCHurmlEMeE5Kj38WDt0fnnRp9ZeIVUSNT8c8NncYFbjdthElhJEPgP8\n/V6EBZnvmWDeT1k8pJy8fylTK6Vu21vUta0QPtaJOEG0nvv3Jg9w41ahWKv9Nsuq\ni3/Jk1JlBwHoQnDoEoZqiVbp649M03BCSErQX4PbtwznsoWT3R5aWYxzMHHt99Tk\nUYHHaFe/SV5/qJdoACaNiTQG8VLW/YdLTzfmE7xUZz7TDZdb6b1yjlVeQLILFuS4\nMznjPtU2JCstkmPqyPQ+cHf+D/Orc2nczN8Zs4IfIEaHTAaXyQs66Wj5i7yfMq+f\nmQIDAQAB\n-----END PUBLIC KEY-----",
+                        "apiurl": "https://api.authentication.us10.hana.ondemand.com",
+                        "identityzone": "109531cftrial",
+                        "identityzoneid": "534fcfa4-cdd5-4f21-8af0-373f7efd2654",
+                        "tenantid": "534fcfa4-cdd5-4f21-8af0-373f7efd2654",
+                        "zoneid": "534fcfa4-cdd5-4f21-8af0-373f7efd2654"
+                    },
+                    "syslog_drain_url": null,
+                    "volume_mounts": []
+                }
+            ],
+            "connectivity": [
+                {
+                    "label": "connectivity",
+                    "provider": null,
+                    "plan": "lite",
+                    "name": "NotificationProcessingService-conn",
+                    "tags": [
+                        "connectivity",
+                        "conn",
+                        "connsvc"
+                    ],
+                    "instance_guid": "32336475-33b7-48e7-80aa-8286bb264d17",
+                    "instance_name": "NotificationProcessingService-conn",
+                    "binding_guid": "4defb145-489a-45a5-94c6-20883a25296a",
+                    "binding_name": null,
+                    "credentials": {
+                        "tenantmode": "dedicated",
+                        "clientid": "sb-clone3233647533b748e780aa8286bb264d17!b226827|connectivity!b23892",
+                        "token_service_domain": "authentication.us10.hana.ondemand.com",
+                        "credential-type": "binding-secret",
+                        "token_service_url": "https://109531cftrial.authentication.us10.hana.ondemand.com",
+                        "xsappname": "clone3233647533b748e780aa8286bb264d17!b226827|connectivity!b23892",
+                        "onpremise_proxy_ldap_port": "20001",
+                        "onpremise_socks5_proxy_port": "20004",
+                        "clientsecret": "4defb145-489a-45a5-94c6-20883a25296a$_ejTQ7xSFRNRHSLV6UaeI47gbN242rMddQ28aST5Mpk=",
+                        "onpremise_proxy_http_port": "20003",
+                        "url": "https://109531cftrial.authentication.us10.hana.ondemand.com",
+                        "onpremise_proxy_host": "connectivityproxy.internal.cf.us10-001.hana.ondemand.com",
+                        "uaadomain": "authentication.us10.hana.ondemand.com",
+                        "onpremise_proxy_port": "20003",
+                        "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoNRTbPAYTz94ox1CX5+E\n5TuraG2UxCHurmlEMeE5Kj38WDt0fnnRp9ZeIVUSNT8c8NncYFbjdthElhJEPgP8\n/V6EBZnvmWDeT1k8pJy8fylTK6Vu21vUta0QPtaJOEG0nvv3Jg9w41ahWKv9Nsuq\ni3/Jk1JlBwHoQnDoEoZqiVbp649M03BCSErQX4PbtwznsoWT3R5aWYxzMHHt99Tk\nUYHHaFe/SV5/qJdoACaNiTQG8VLW/YdLTzfmE7xUZz7TDZdb6b1yjlVeQLILFuS4\nMznjPtU2JCstkmPqyPQ+cHf+D/Orc2nczN8Zs4IfIEaHTAaXyQs66Wj5i7yfMq+f\nmQIDAQAB\n-----END PUBLIC KEY-----",
+                        "identityzone": "109531cftrial",
+                        "tenantid": "534fcfa4-cdd5-4f21-8af0-373f7efd2654",
+                        "onpremise_proxy_rfc_port": "20001"
+                    },
+                    "syslog_drain_url": null,
+                    "volume_mounts": []
+                }
+            ],
+            "destination": [
+                {
+                    "label": "destination",
+                    "provider": null,
+                    "plan": "lite",
+                    "name": "NotificationProcessingService-dest",
+                    "tags": [
+                        "destination",
+                        "conn",
+                        "connsvc"
+                    ],
+                    "instance_guid": "4049528b-158f-4d21-af02-c0142ea7af59",
+                    "instance_name": "NotificationProcessingService-dest",
+                    "binding_guid": "79488bc5-c02f-4b18-a9ab-63fe6b203f3b",
+                    "binding_name": null,
+                    "credentials": {
+                        "tenantmode": "dedicated",
+                        "clientid": "sb-clone4049528b158f4d21af02c0142ea7af59!b226827|destination-xsappname!b62",
+                        "credential-type": "binding-secret",
+                        "xsappname": "clone4049528b158f4d21af02c0142ea7af59!b226827|destination-xsappname!b62",
+                        "clientsecret": "79488bc5-c02f-4b18-a9ab-63fe6b203f3b$xbd01vuZIh23yGgox5lvUJNKDSSNeitMHbjKVdOhhp4=",
+                        "uri": "https://destination-configuration.cfapps.us10.hana.ondemand.com",
+                        "url": "https://109531cftrial.authentication.us10.hana.ondemand.com",
+                        "uaadomain": "authentication.us10.hana.ondemand.com",
+                        "instanceid": "4049528b-158f-4d21-af02-c0142ea7af59",
+                        "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoNRTbPAYTz94ox1CX5+E\n5TuraG2UxCHurmlEMeE5Kj38WDt0fnnRp9ZeIVUSNT8c8NncYFbjdthElhJEPgP8\n/V6EBZnvmWDeT1k8pJy8fylTK6Vu21vUta0QPtaJOEG0nvv3Jg9w41ahWKv9Nsuq\ni3/Jk1JlBwHoQnDoEoZqiVbp649M03BCSErQX4PbtwznsoWT3R5aWYxzMHHt99Tk\nUYHHaFe/SV5/qJdoACaNiTQG8VLW/YdLTzfmE7xUZz7TDZdb6b1yjlVeQLILFuS4\nMznjPtU2JCstkmPqyPQ+cHf+D/Orc2nczN8Zs4IfIEaHTAaXyQs66Wj5i7yfMq+f\nmQIDAQAB\n-----END PUBLIC KEY-----",
+                        "identityzone": "109531cftrial",
+                        "tenantid": "534fcfa4-cdd5-4f21-8af0-373f7efd2654"
+                    },
+                    "syslog_drain_url": null,
+                    "volume_mounts": []
+                }
+            ]
+        }
+    }
+}

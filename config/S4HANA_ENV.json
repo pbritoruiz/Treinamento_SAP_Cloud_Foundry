@@ -1,0 +1,8 @@
+{
+    "destination": "SAP_ES5",
+    "providers": {
+        "oDataServices": {
+            "SalesOrderSet": "/sap/opu/odata/iwbep/GWSAMPLE_BASIC/SalesOrderSet"
+        }
+    }
+}
